@@ -5,4 +5,4 @@
 
 
 
-![alt text](https://github.com/omodev/Project-1/tree/master/Design/project1Design/Class_Diagram.PNG)
+![alt text](https://github.com/omodev/Project-1/tree/master/Design/project1Design/Class_Diagram.PNG "Logo Title Text 1")

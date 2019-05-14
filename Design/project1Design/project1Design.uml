@@ -184,9 +184,6 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_hxhVYHG8EemMfIcpILFd_A"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_nW0xAHG8EemMfIcpILFd_A"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_WfJh4HG_EemMfIcpILFd_A" name="MainPage">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_psW3QHQoEemzTdLVGFGaEQ" name="NewTours" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_BkkpkHQpEemzTdLVGFGaEQ" name="searchResult" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -318,4 +315,5 @@
   <MVC:View xmi:id="_SgBlQHZyEem4MqvWYwYBrQ" base_Class="_Qk5VUHZyEem4MqvWYwYBrQ"/>
   <MVC:Controller xmi:id="_ViNj4HZyEem4MqvWYwYBrQ" base_Class="_TYwkEHZyEem4MqvWYwYBrQ"/>
   <MVC:View xmi:id="_Xcq54HZ8Eem4MqvWYwYBrQ" base_Class="_UJOzMHZ8Eem4MqvWYwYBrQ"/>
+  <MVC:Controller xmi:id="_IgyXIHaBEem4MqvWYwYBrQ" base_Class="_wi0e8HZ8Eem4MqvWYwYBrQ"/>
 </xmi:XMI>

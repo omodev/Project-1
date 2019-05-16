@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jasmine-node": ""
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "mocha"
+  }
+}

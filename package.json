@@ -1,0 +1,23 @@
+{
+  "name": "Project-1",
+  "version": "1.0.0",
+  "description": "![alt text](https://raw.githubusercontent.com/omodev/Project-1/master/Design/project1Design/Class_Diagram.PNG \"Class Diagram\")",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omodev/Project-1.git"
+  },
+  "keywords": [],
+  "author": "Omar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omodev/Project-1/issues"
+  },
+  "homepage": "https://github.com/omodev/Project-1#readme"
+}

@@ -8,17 +8,37 @@
 'use strict'    // Strict Mode
 
 
-/**
- * Module dependencies.
- */
+
+
+
+// Module dependencies.
 
 const http = require('http');
 const fs = require("fs") ;
-const logger = require("./sharedFeatures/logger")
+const logger = require("./sharedFeatures/logger"); 
+const MongoClient = require('mongodb').MongoClient;
 
-/**
-* Creating the http server
-*/
+
+
+
+// MongoDB setup    -- Working with mongoDB native (No ORM)
+const url = 'mongodb://localhost:27017';
+const dbName  = "test";
+
+const dbClient = new MongoClient(url);
+
+dbClient.connect((err)=>{
+
+      console.log("Connected Successfully to DB");
+      const db = dbClient.db(dbName);
+      dbClient.close();
+      
+});
+
+
+
+    
+// Creating the http server
 var server = http.createServer((req, res)=> {
 
     // Create a readStream (source from which we can read)

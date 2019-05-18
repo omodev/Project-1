@@ -14,6 +14,7 @@
 
 const http = require('http');
 const fs = require("fs") ;
+const logger = require("./sharedFeatures/logger")
 
 /**
 * Creating the http server
@@ -28,4 +29,7 @@ var server = http.createServer((req, res)=> {
 
 }); 
 
-server.listen(3000) ;
+server.listen(3000,()=>{
+      
+       logger.log("Server listening on port 3000 and pid is " + process.pid) ;
+}) ;

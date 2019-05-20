@@ -29,7 +29,7 @@ const dbClient = new MongoClient(url);
 
 dbClient.connect((err)=>{
 
-      console.log("Connected Successfully to DB");
+      logger.log("Connected Successfully to DB");
       const db = dbClient.db(dbName);
       dbClient.close();
       

@@ -41,11 +41,23 @@ dbClient.connect((err)=>{
 // Creating the http server
 var server = http.createServer((req, res)=> {
 
-    // Create a readStream (source from which we can read)
-     var readStream = fs.createReadStream(__dirname+"/data.txt");
+    res.writeHead(200,{'content-type': "text/html"}) ;
 
-     // Pipe whatever is being read from the source to the res
-      readStream.pipe(res) ;
+    var url = req.url ; 
+
+    if(url === "/guide"){
+           //res.write(__dirname+"/views/guidePage");
+           res.render(__dirname+"/views/guidePage.ejs");
+           res._write
+    }
+    else if (url === "/login") {
+            res.write("Login Page") ;
+            res.end();
+    }
+    else{
+           res.write("Main page"); 
+           res.end();
+    }
 
 }); 
 
@@ -53,3 +65,9 @@ server.listen(3000,()=>{
       
        logger.log("Server listening on port 3000 and pid is " + process.pid) ;
 }) ;
+
+
+//  server.close((err)=>{
+  
+//    console.log("CLOSED " +err);
+//  })

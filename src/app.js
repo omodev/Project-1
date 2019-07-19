@@ -25,6 +25,8 @@ const express = require('express') ;
 const logger = require("./sharedFeatures/logger"); 
 const MongoClient = require('mongodb').MongoClient;
 const config = require("../config/config");
+const path = require("path") ;
+const sharedMiddleware = require("../shared_middleware/Shared_middleware");
 
 
 
@@ -34,7 +36,25 @@ const config = require("../config/config");
  */
 
  let app = express() ;
+
+ 
+
+ /**
+  * Express Config
+  */
  app.set("port", config.port);
+ app.set("views",path.join(__dirname, "views")); 
+ app.set("view engine", "ejs") ;
+
+/**
+ * Loading middlewares
+ */
+sharedMiddleware.loadMiddleware(app);
+
+/**
+ * Router middleware
+ */
+let router = express.Router() ;
 
 
 
@@ -57,12 +77,21 @@ dbClient.connect((err)=>{
     
 
 /**
+ * Creating routes
+ */
+
+ router.get("/",(req,res)=>{
+      res.send("Root") ;
+ });
+
+
+ /**
  * Start Express server.
  */
 
-app.listen(app.get("port"),()=>{
+ app.listen(app.get("port"),()=>{
       
-       logger.log("Server listening on port " +app.get("port") +" and pid is " + process.pid) ;
-}) ;
-
+        logger.log("Server listening on port " +app.get("port") +" and pid is " + process.pid) ;
+ }) ;
+app.use(router) ;
 module.exports = app ; 

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/omodev/Project-1#readme",
   "dependencies": {
     "chai": "^4.2.0",
+    "lodash": "^4.17.15",
     "mocha": "^6.1.4",
     "mockery": "^2.1.0",
     "mongodb": "^3.2.5"

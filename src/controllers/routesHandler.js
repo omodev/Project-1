@@ -1,0 +1,1 @@
+exports.mainPage = require("./mainPageController") ;

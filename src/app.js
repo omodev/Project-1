@@ -27,6 +27,7 @@ const MongoClient = require('mongodb').MongoClient;
 const config = require("../config/config");
 const path = require("path") ;
 const sharedMiddleware = require("../shared_middleware/Shared_middleware");
+const routesHandler = require("./controllers/routesHandler");
 
 
 
@@ -80,10 +81,7 @@ dbClient.connect((err)=>{
  * Creating routes
  */
 
- router.get("/",(req,res)=>{
-      res.send("Root") ;
- });
-
+ router.get("/", routesHandler.mainPage.getMainPage);
 
  /**
  * Start Express server.

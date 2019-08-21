@@ -91,5 +91,7 @@ dbClient.connect((err)=>{
       
         logger.log("Server listening on port " +app.get("port") +" and pid is " + process.pid) ;
  }) ;
+
+
 app.use(router) ;
 module.exports = app ; 

@@ -7,7 +7,8 @@ return exports.renderMainPage(req,res);
 //     res.render("mainPage.ejs",{
 //         error:null,
 //         dataReq:req,
-//         dataRes:res
+//         dataRes:res,
+//         title: "TITLE TEST"
 //     });
 //     if (err) {
 //     res.render("mainPage.ejs",{
@@ -17,8 +18,6 @@ return exports.renderMainPage(req,res);
 // });
 }
 
-// to understand the use of promise here, try implementing the old way (using only callbacks)
-
 exports.renderMainPage = (req,res)=>{
 
     exports.mainpagePromise({req: req , res: res})
@@ -26,7 +25,8 @@ exports.renderMainPage = (req,res)=>{
          res.render("mainPage.ejs",{
              error:null,
              dataReq:success.req,
-             dataRes:success.res
+             dataRes:success.res,
+             title: "TITLE TEST"
          })
     })
     .catch(err=>{
@@ -36,16 +36,16 @@ exports.renderMainPage = (req,res)=>{
     })
 }
 
-// exports.mainwithCb = function(req,res,cb) {
+//  exports.mainwithCb = function(req,res,cb) {
 //     cb(req,res);
-// }
+//  }
 
 exports.mainpagePromise = (datas) =>{
     return new Promise((resolve,reject)=>{
         let req = datas.req;
         let res = datas.res; 
-        let obj = JSON.parse({req,res}) ;
+        let obj = {req,res} ;
         datas = obj ;
-        return resolve(datas);
+        resolve(datas);
     })
-}
+} 

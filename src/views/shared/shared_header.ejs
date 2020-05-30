@@ -1,0 +1,59 @@
+<meta charset="utf-8" />
+<title>Touristify</title>
+
+<meta name="description" 				content="Touristify" />
+<meta name="viewport" 					content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" 		content="IE=edge" />
+<meta http-equiv="Content-Type" 		content="text/html; charset=utf-8" />
+
+
+<!--Basic Styles-->
+
+<!--Fonts-->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+
+<link href='//fonts.googleapis.com/css?family=Roboto:400,300' 	rel='stylesheet' type='text/css'>
+<style type="text/css" media="screen">
+	#adminpanelbutton a{
+		color:#fb6e52;
+	}
+
+
+	.awrappnot{
+		display: table;
+		cursor: pointer;
+	}
+
+	.awrappnot i {
+		margin-right: 0.5em;
+	}
+
+	.awrappnot .message{
+		width: 100%!important;
+	}
+
+	.badgenotif{
+		color: #fb6e52;
+		font-weight: bold;
+		border: 1px solid #fb6e52!important;
+	}
+</style>
+
+<script>
+	function formatTimezone(tz){
+		var signe = tz/Math.abs(tz);
+		tz = Math.abs(tz);
+		var hour = Math.floor(tz/60);
+		var minute = tz % 60;
+		var result = ("000"+hour).slice(-2)+("000"+minute).slice(-2);
+		if(signe<0){
+			return "+"+result;
+		}else{
+			return "-"+result;
+		}
+	}
+	
+	var tzOffset = new Date().getTimezoneOffset();
+	document.cookie = "timezone="+formatTimezone(tzOffset);
+</script>
